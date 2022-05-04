@@ -21,27 +21,29 @@ from barcode import EAN13
 from barcode.writer import ImageWriter
 
 ## Video Path
-video_path = r'D:\Raw_Data\data_boxes_with_pallet\pallet_video\vid_pallet_01_13sec.mp4'
+#video_path = r'D:\Raw_Data\data_boxes_with_pallet\pallet_video\vid_pallet_01_13sec.mp4'
+video_path = glob.glob(r'D:\Raw_Data\data_boxes_with_pallet\pallet_video\*.mp4')
 address_path = 'D:\\Raw_Data\\data_boxes_with_pallet\\Photo_of_Pallete\\'
 
 #The core process
+#print(len(video_path))
 
-cap = cv2.VideoCapture(video_path)
+k = 0
+for video in tqdm(video_path):
+    cap = cv2.VideoCapture(video)
 
-i = 0
+    i = 0
+    while (cap.isOpened()):
+        ret, frame = cap.read()
 
-while (cap.isOpened()):
-    ret, frame = cap.read()
-
-    #prevent infinite looping
-    if (ret == False):
-        break
-
-    # Save Frame by Frame into disk using imwrite method
-    cv2.imwrite(address_path+'Framev1'+str(i)+'.jpg',frame)
-
-    i+=1
-
+        #prevent infinite looping
+        if (ret == False):
+            break
+        # Save Frame by Frame into disk using imwrite method
+        if (i %10 ==0):
+            cv2.imwrite(address_path+'Frame_v-'+str(k)+'_'+str(i)+'.jpg',frame)
+        i+=1
+    k +=1
 
 
 
