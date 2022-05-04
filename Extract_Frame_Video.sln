@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32228.343
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Extract_Frame_Video", "Extract_Frame_Video\Extract_Frame_Video.pyproj", "{68060D61-844D-43DE-B147-0CCADED89CFF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{68060D61-844D-43DE-B147-0CCADED89CFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68060D61-844D-43DE-B147-0CCADED89CFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B7999EC4-FFFF-4D31-BBE0-C087A018FF67}
+	EndGlobalSection
+EndGlobal
