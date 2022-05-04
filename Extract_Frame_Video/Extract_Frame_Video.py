@@ -40,8 +40,8 @@ for video in tqdm(video_path):
         if (ret == False):
             break
         # Save Frame by Frame into disk using imwrite method
-        if (i %10 ==0):
-            cv2.imwrite(address_path+'Frame_v-'+str(k)+'_'+str(i)+'.jpg',frame)
+        #if (i %10 ==0):
+        cv2.imwrite(address_path+'Frame_v-'+str(k)+'_'+str(i)+'.jpg',frame)
         i+=1
     k +=1
 
